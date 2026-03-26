@@ -4,7 +4,7 @@ export type NavItem = {
   external?: boolean
 }
 
-export type KingdomPillar = {
+export type HighlightCard = {
   title: string
   description: string
   stat: string
@@ -34,11 +34,11 @@ export type Project = {
   external?: boolean
 }
 
-export type StatusTone = 'stable' | 'ready' | 'active'
+export type HouseNoteTone = 'warm' | 'steady' | 'open'
 
-export type StatusItem = {
+export type HouseNote = {
   label: string
-  value: string
+  title: string
   detail: string
-  tone: StatusTone
+  tone: HouseNoteTone
 }

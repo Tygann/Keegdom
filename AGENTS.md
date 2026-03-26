@@ -18,3 +18,4 @@
 - `src/pages` should remain lightweight route targets.
 - `src/data` is the source of truth for navigation, cards, and status content.
 - New UI should match existing spacing, borders, tone, and motion patterns.
+- After completing code changes, always provide a suggested commit message in the final response.

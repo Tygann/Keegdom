@@ -1,23 +1,23 @@
-import type { KingdomPillar } from '../types/content'
+import type { HighlightCard } from '../types/content'
 
-const kingdomHighlights: KingdomPillar[] = [
+const familyHighlights: HighlightCard[] = [
   {
-    title: 'Home',
+    title: 'Home Base',
     description:
-      'A calm front door for day-to-day family life, shared links, and the digital spaces that support the house.',
-    stat: 'Shared base',
+      'A calm place for family resources, shared references, and the digital odds and ends that help daily life run smoothly.',
+    stat: 'Useful, not noisy',
   },
   {
-    title: 'Family',
+    title: 'Family Story',
     description:
-      'A place for stories, connections, and the people at the center of everything the site should support.',
-    stat: 'People first',
+      'A home for milestones, memories, names, and the people who make this family feel like itself.',
+    stat: 'Stories over systems',
   },
   {
-    title: 'Projects',
+    title: 'Built With Care',
     description:
-      'A lightweight showcase for what Tyler is building, plus the practical systems running in the background.',
-    stat: 'Always building',
+      "Tyler's work still lives here, but only in service of keeping the family home useful, steady, and ready to grow.",
+    stat: 'Quietly maintained',
   },
 ]
 
@@ -25,67 +25,69 @@ export const siteConfig = {
   name: 'Keegdom',
   domain: 'www.keegan.me',
   description:
-    'The digital home of the Keegan family: part home base, part family hub, part kingdom.',
+    'The digital home of the Keegan family: a warm family homepage with room for stories, resources, and the projects around it.',
   hero: {
-    eyebrow: 'Digital family kingdom',
+    eyebrow: 'The Keegan family home',
     title: 'Welcome to the Keegdom \u{1F451}',
     subtitle:
-      'The digital home of the Keegan family \u2014 part home base, part family hub, part kingdom.',
+      'A small digital home for the Keegan family \u2014 warm, useful, and built to grow with us over time.',
     supportingText:
-      "From family life to home systems to the projects we're building, this is our corner of the internet.",
+      'Part family homepage, part shared home base, and part quiet corner of the internet for the things that matter to us.',
     primaryCta: {
-      label: 'Enter the Kingdom',
-      href: '#kingdom',
+      label: 'Meet the Family',
+      href: '#family',
     },
     secondaryCta: {
-      label: "Visit Tyler's Site",
-      href: 'https://tylerkeegan.com',
-      external: true,
+      label: 'Family Resources',
+      href: '#resources',
+      external: false,
     },
-    highlights: ['Family first', 'Practical systems', 'Room to grow'],
+    highlights: ['Family first', 'Useful links', 'Quietly growing'],
   },
-  kingdom: {
-    eyebrow: 'Our Kingdom, Online',
-    title: 'A shared home for family, systems, and the work happening around them.',
+  family: {
+    eyebrow: 'Meet the Keegans',
+    title: 'A family homepage that puts people first and everything else in its place.',
     description:
-      'Keegdom is meant to feel welcoming before it feels technical, while still giving the family a strong digital foundation to build on later.',
-    highlights: kingdomHighlights,
+      'Keegdom is meant to feel like a front porch first: welcoming to visitors, helpful for family, and structured enough to hold stories, links, and future pages without becoming cluttered.',
+    highlights: familyHighlights,
   },
-  gateways: {
-    eyebrow: 'Kingdom Gateways',
-    title: 'Quick links to the parts of the realm that matter most.',
+  resources: {
+    eyebrow: 'Family Resources',
+    title: 'The practical links we come back to most.',
     description:
-      'Every gateway is kept lightweight and intentional so the homepage stays useful without turning into a cluttered dashboard.',
+      'These links are here to be useful, not to take over the homepage. Over time each one can grow into its own space without changing the role of the front page.',
   },
   house: {
     eyebrow: 'House of Keegan',
-    title: 'A family home with enough structure to grow over time.',
+    title: 'A warm, useful place for the people who live here.',
     description:
-      'Keegdom should feel like a polished family homepage today, while leaving room for richer stories, private utilities, and connected services later.',
+      'The homepage should feel like a front door first: welcoming to guests, helpful to family, and flexible enough to evolve naturally.',
     body:
-      'The goal is a home base that can hold practical links, meaningful family context, and the projects orbiting around the household without feeling overloaded.',
+      'Over time this can hold stories, milestones, favorite links, household references, and the small digital tools that make life easier. The goal is not to show everything. The goal is to make the important things pleasant to return to.',
     points: [
-      'A welcoming front door to family resources',
-      'Shared context for home systems and services',
-      'A foundation for future family and personal pages',
+      'Family story and identity come first',
+      'Useful household links stay close, but not loud',
+      "Tyler's projects support the home instead of defining it",
     ],
     crestTitle: 'House Keegan',
-    motto: 'Placeholder for the Keegan family motto',
-    established: 'Established: TBD',
+    crestDescription:
+      'A simple family mark that gives the site a little character without turning the whole experience into costume.',
+    motto: 'Placeholder for a future family motto',
+    established: 'Still being written',
   },
-  builder: {
-    eyebrow: 'From the Builder',
-    title: "Projects, systems, and notes from Tyler's corner of the realm.",
+  fromTheHouse: {
+    eyebrow: 'From the House',
+    title: 'A little room for what this season feels like.',
     description:
-      'This section keeps the homepage connected to the things being built without overpowering the family-first purpose of the site.',
+      'This gives the homepage a lived-in center. It can later hold updates, notes, photos, or family milestones without requiring a full blog or CMS.',
   },
-  status: {
-    eyebrow: 'Realm Status',
-    title: 'Core systems at a glance.',
+  tyler: {
+    eyebrow: 'From Tyler',
+    title: 'A few of the things Tyler is building around the edges.',
     description:
-      'A compact status strip keeps the site feeling alive and useful, with room to become a richer service overview later.',
+      'Tyler still has a builder corner here, but it supports the family home instead of competing with it.',
   },
   footer: {
-    tagline: 'Built by the Keegans',
+    tagline: 'A home on the internet for the Keegans',
   },
 } as const

@@ -5,7 +5,7 @@ import { gateways } from '../data/gateways'
 import { siteConfig } from '../data/site'
 import type { GatewayIcon } from '../types/content'
 
-function GatewayGlyph({ icon }: { icon: GatewayIcon }) {
+function ResourceGlyph({ icon }: { icon: GatewayIcon }) {
   const baseClassName = 'h-6 w-6'
 
   switch (icon) {
@@ -63,14 +63,14 @@ function GatewayGlyph({ icon }: { icon: GatewayIcon }) {
   }
 }
 
-export default function GatewaysSection() {
+export default function ResourcesSection() {
   return (
-    <section className="scroll-mt-28 py-16 sm:py-20" id="gateways">
+    <section className="scroll-mt-28 py-16 sm:py-20" id="resources">
       <Container>
         <SectionHeader
-          eyebrow={siteConfig.gateways.eyebrow}
-          title={siteConfig.gateways.title}
-          description={siteConfig.gateways.description}
+          eyebrow={siteConfig.resources.eyebrow}
+          title={siteConfig.resources.title}
+          description={siteConfig.resources.description}
         />
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
@@ -84,7 +84,7 @@ export default function GatewaysSection() {
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[rgba(201,163,86,0.16)] bg-[rgba(201,163,86,0.1)] text-[var(--color-gold)]">
-                  <GatewayGlyph icon={gateway.icon} />
+                  <ResourceGlyph icon={gateway.icon} />
                 </div>
                 <span className="rounded-full border border-white/10 bg-white/4 px-3 py-1 text-[0.72rem] font-medium text-white/52">
                   {gateway.domain}
@@ -99,7 +99,7 @@ export default function GatewaysSection() {
               </p>
 
               <div className="mt-6 flex items-center justify-between text-sm font-semibold text-[var(--color-gold)]">
-                <span>Open gateway</span>
+                <span>Visit resource</span>
                 <span className="transition duration-300 group-hover:translate-x-1">{'->'}</span>
               </div>
             </Card>

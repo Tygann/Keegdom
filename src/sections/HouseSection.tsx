@@ -44,10 +44,7 @@ export default function HouseSection() {
               </div>
 
               <div className="rounded-[26px] border border-white/8 bg-[radial-gradient(circle_at_top,_rgba(201,163,86,0.16),_rgba(14,16,15,0.96))] p-6">
-                <p className="text-sm leading-7 text-white/68">
-                  Designed as a premium family front door with enough flexibility for home systems,
-                  future family content, and practical day-to-day links.
-                </p>
+                <p className="text-sm leading-7 text-white/68">{siteConfig.house.crestDescription}</p>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">

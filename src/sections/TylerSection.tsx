@@ -5,14 +5,14 @@ import SectionHeader from '../components/SectionHeader'
 import { projects } from '../data/projects'
 import { siteConfig } from '../data/site'
 
-export default function BuilderSection() {
+export default function TylerSection() {
   return (
-    <section className="scroll-mt-28 py-16 sm:py-20" id="builder">
+    <section className="scroll-mt-28 py-16 sm:py-20" id="tyler">
       <Container>
         <SectionHeader
-          eyebrow={siteConfig.builder.eyebrow}
-          title={siteConfig.builder.title}
-          description={siteConfig.builder.description}
+          eyebrow={siteConfig.tyler.eyebrow}
+          title={siteConfig.tyler.title}
+          description={siteConfig.tyler.description}
         />
 
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -31,7 +31,7 @@ export default function BuilderSection() {
                 {project.description}
               </p>
               <div className="mt-6 text-sm font-semibold text-[var(--color-gold)]">
-                Explore project {'->'}
+                Explore more {'->'}
               </div>
             </Card>
           ))}

@@ -4,9 +4,9 @@ import LogoMark from '../components/LogoMark'
 import { siteConfig } from '../data/site'
 
 const heroStats = [
-  { label: 'Home', value: 'Base' },
-  { label: 'Family', value: 'Hub' },
-  { label: 'Build', value: 'Live' },
+  { label: 'Family', value: 'First' },
+  { label: 'Stories', value: 'Growing' },
+  { label: 'Home', value: 'Shared' },
 ]
 
 export default function HeroSection() {
@@ -58,7 +58,7 @@ export default function HeroSection() {
               <div className="absolute bottom-8 left-8 h-24 w-24 rounded-full bg-[rgba(41,86,71,0.18)] blur-3xl" />
 
               <div className="absolute left-6 top-6 rounded-full border border-white/10 bg-white/6 px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-subtle)] backdrop-blur-sm">
-                House Keegan
+                The Keegan family
               </div>
 
               <div className="absolute bottom-6 right-6 flex flex-col gap-2">
@@ -95,7 +95,7 @@ export default function HeroSection() {
                     Keegdom
                   </h2>
                   <p className="mt-2 text-sm leading-7 text-white/62">
-                    A subtle kingdom identity without losing the warmth of home.
+                    A family-first front door with just enough identity to feel like its own little place.
                   </p>
                 </div>
 

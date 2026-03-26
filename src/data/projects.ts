@@ -2,25 +2,25 @@ import type { Project } from '../types/content'
 
 export const projects: Project[] = [
   {
-    title: 'Renfo',
-    eyebrow: 'Focused product work',
+    title: 'Home systems',
+    eyebrow: 'Keeping the house humming',
     description:
-      'A product and process effort centered on clarity, momentum, and deliberate execution.',
+      'Automation, dashboards, and small digital systems that quietly support family life behind the scenes.',
+    href: '#resources',
+  },
+  {
+    title: 'Renfo',
+    eyebrow: 'Product work',
+    description:
+      "One of Tyler's current product efforts, shaped by the same care for clarity and practical usefulness that shows up around the house.",
     href: 'https://tylerkeegan.com',
     external: true,
   },
   {
-    title: 'Home systems',
-    eyebrow: 'House infrastructure',
-    description:
-      'Dashboards, automation, and the supporting systems that make the household run more smoothly.',
-    href: '#gateways',
-  },
-  {
     title: 'Dev notes',
-    eyebrow: 'Working in public',
+    eyebrow: 'Ideas and notes',
     description:
-      'Patterns, lessons, and practical notes from building software and family-friendly systems.',
+      'Writing and working notes from building software, improving systems, and learning in public.',
     href: 'https://tylerkeegan.com',
     external: true,
   },

@@ -3,18 +3,18 @@ import Container from '../components/Container'
 import SectionHeader from '../components/SectionHeader'
 import { siteConfig } from '../data/site'
 
-export default function KingdomSection() {
+export default function FamilySection() {
   return (
-    <section className="scroll-mt-28 py-16 sm:py-20" id="kingdom">
+    <section className="scroll-mt-28 py-16 sm:py-20" id="family">
       <Container>
         <SectionHeader
-          eyebrow={siteConfig.kingdom.eyebrow}
-          title={siteConfig.kingdom.title}
-          description={siteConfig.kingdom.description}
+          eyebrow={siteConfig.family.eyebrow}
+          title={siteConfig.family.title}
+          description={siteConfig.family.description}
         />
 
         <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {siteConfig.kingdom.highlights.map((item) => (
+          {siteConfig.family.highlights.map((item) => (
             <Card key={item.title} interactive>
               <p className="eyebrow">{item.stat}</p>
               <h3 className="font-display mt-5 text-2xl font-semibold tracking-[-0.03em] text-[var(--color-text)]">

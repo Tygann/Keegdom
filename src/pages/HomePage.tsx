@@ -1,20 +1,20 @@
 import MainLayout from '../layouts/MainLayout'
-import BuilderSection from '../sections/BuilderSection'
-import GatewaysSection from '../sections/GatewaysSection'
+import FamilySection from '../sections/FamilySection'
+import FromTheHouseSection from '../sections/FromTheHouseSection'
 import HeroSection from '../sections/HeroSection'
 import HouseSection from '../sections/HouseSection'
-import KingdomSection from '../sections/KingdomSection'
-import StatusSection from '../sections/StatusSection'
+import ResourcesSection from '../sections/ResourcesSection'
+import TylerSection from '../sections/TylerSection'
 
 export default function HomePage() {
   return (
     <MainLayout>
       <HeroSection />
-      <KingdomSection />
-      <GatewaysSection />
+      <FamilySection />
       <HouseSection />
-      <BuilderSection />
-      <StatusSection />
+      <FromTheHouseSection />
+      <ResourcesSection />
+      <TylerSection />
     </MainLayout>
   )
 }
