@@ -40,7 +40,7 @@ export default function HouseSection() {
                     {siteConfig.house.crestTitle}
                   </h3>
                 </div>
-                <LogoMark size={72} />
+                <LogoMark kind="crest" size={72} />
               </div>
 
               <div className="rounded-[26px] border border-white/8 bg-[radial-gradient(circle_at_top,_rgba(201,163,86,0.16),_rgba(14,16,15,0.96))] p-6">

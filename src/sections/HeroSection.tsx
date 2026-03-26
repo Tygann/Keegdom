@@ -49,7 +49,7 @@ export default function HeroSection() {
                   The Keegan family
                 </p>
                 <div className="mt-10 flex h-36 w-36 items-center justify-center rounded-[32px] border border-[rgba(201,163,86,0.18)] bg-[radial-gradient(circle_at_top,_rgba(201,163,86,0.14),_rgba(15,18,16,0.96))]">
-                  <LogoMark framed={false} size={88} />
+                  <LogoMark framed={false} kind="crest" size={88} />
                 </div>
               </div>
 
