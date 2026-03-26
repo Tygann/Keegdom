@@ -4,11 +4,13 @@ import Navbar from '../sections/Navbar'
 
 type MainLayoutProps = {
   children: ReactNode
+  pageMeta?: ReactNode
 }
 
-export default function MainLayout({ children }: MainLayoutProps) {
+export default function MainLayout({ children, pageMeta }: MainLayoutProps) {
   return (
     <div className="relative min-h-screen overflow-hidden">
+      {pageMeta}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[34rem] bg-[radial-gradient(circle_at_top,_rgba(201,163,86,0.16),_transparent_62%)]" />
       <div className="pointer-events-none absolute right-[-12rem] top-[18rem] h-[28rem] w-[28rem] rounded-full bg-[rgba(41,86,71,0.15)] blur-3xl" />
       <Navbar />

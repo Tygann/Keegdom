@@ -60,12 +60,20 @@ export default function Navbar() {
           </button>
 
           {isOpen ? (
-            <div
-              className="panel absolute left-0 right-0 top-[calc(100%+0.75rem)] p-3 md:hidden"
-              id="mobile-menu"
-            >
-              <NavLinkList items={navLinks} orientation="vertical" onNavigate={closeMenu} />
-            </div>
+            <>
+              <button
+                aria-label="Close navigation menu"
+                className="fixed inset-0 top-0 z-40 bg-[rgba(5,7,6,0.68)] backdrop-blur-sm md:hidden"
+                type="button"
+                onClick={closeMenu}
+              />
+              <div
+                className="panel absolute left-0 right-0 top-[calc(100%+0.75rem)] z-50 p-3 md:hidden"
+                id="mobile-menu"
+              >
+                <NavLinkList items={navLinks} orientation="vertical" onNavigate={closeMenu} />
+              </div>
+            </>
           ) : null}
         </nav>
       </Container>
