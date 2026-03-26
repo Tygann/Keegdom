@@ -28,11 +28,11 @@ export const siteConfig = {
     'The digital home of the Keegan family: a warm family homepage with room for stories, resources, and the projects around it.',
   hero: {
     eyebrow: 'The Keegan family home',
-    title: 'Welcome to the Keegdom \u{1F451}',
+    title: 'Welcome to Keegdom',
     subtitle:
-      'A small digital home for the Keegan family \u2014 warm, useful, and built to grow with us over time.',
+      'A warm digital home for the Keegan family, built to grow quietly over time.',
     supportingText:
-      'Part family homepage, part shared home base, and part quiet corner of the internet for the things that matter to us.',
+      'Part family homepage, part shared home base, and part quiet corner of the internet for the things that matter most.',
     primaryCta: {
       label: 'Meet the Family',
       href: '/family',
