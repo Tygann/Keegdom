@@ -6,7 +6,7 @@ export const projects: Project[] = [
     eyebrow: 'Keeping the house humming',
     description:
       'Automation, dashboards, and small digital systems that quietly support family life behind the scenes.',
-    href: '#resources',
+    href: '/resources',
   },
   {
     title: 'Renfo',

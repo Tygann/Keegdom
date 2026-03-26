@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Container from '../components/Container'
 import LogoMark from '../components/LogoMark'
 import NavLinkList from '../components/NavLinkList'
@@ -16,7 +17,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 pt-4">
       <Container>
         <nav className="panel relative flex items-center justify-between gap-4 px-4 py-3 sm:px-6">
-          <a className="flex min-w-0 items-center gap-3" href="#top" onClick={closeMenu}>
+          <Link className="flex min-w-0 items-center gap-3" to="/" onClick={closeMenu}>
             <LogoMark size={48} />
             <div className="min-w-0">
               <p className="font-display truncate text-sm font-semibold uppercase tracking-[0.24em] text-[var(--color-text)] sm:text-base">
@@ -24,7 +25,7 @@ export default function Navbar() {
               </p>
               <p className="truncate text-xs text-white/50">Digital family home</p>
             </div>
-          </a>
+          </Link>
 
           <div className="hidden md:block">
             <NavLinkList items={navLinks} />

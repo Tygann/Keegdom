@@ -35,11 +35,11 @@ export const siteConfig = {
       'Part family homepage, part shared home base, and part quiet corner of the internet for the things that matter to us.',
     primaryCta: {
       label: 'Meet the Family',
-      href: '#family',
+      href: '/family',
     },
     secondaryCta: {
       label: 'Family Resources',
-      href: '#resources',
+      href: '/resources',
       external: false,
     },
     highlights: ['Family first', 'Useful links', 'Quietly growing'],

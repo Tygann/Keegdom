@@ -1,12 +1,14 @@
-import Container from '../components/Container'
+import MainLayout from '../layouts/MainLayout'
+import FamilySection from '../sections/FamilySection'
+import FromTheHouseSection from '../sections/FromTheHouseSection'
+import HouseSection from '../sections/HouseSection'
 
 export default function FamilyPage() {
   return (
-    <main className="py-16">
-      <Container>
-        {/* Placeholder for future routed family content, stories, and shared household pages. */}
-        <h1 className="font-display text-4xl font-semibold text-[var(--color-text)]">Family</h1>
-      </Container>
-    </main>
+    <MainLayout>
+      <FamilySection />
+      <HouseSection />
+      <FromTheHouseSection />
+    </MainLayout>
   )
 }

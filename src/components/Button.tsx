@@ -1,4 +1,5 @@
 import type { MouseEventHandler, ReactNode } from 'react'
+import { Link } from 'react-router-dom'
 import { classNames } from '../utils/classNames'
 
 type ButtonVariant = 'primary' | 'secondary' | 'ghost'
@@ -36,8 +37,17 @@ export default function Button({
   variant = 'primary',
 }: ButtonProps) {
   const classes = classNames(baseClasses, variantClasses[variant], className)
+  const isInternalRoute = Boolean(href && href.startsWith('/'))
 
   if (href) {
+    if (isInternalRoute) {
+      return (
+        <Link className={classes} to={href}>
+          {children}
+        </Link>
+      )
+    }
+
     const safeRel = target === '_blank' ? rel ?? 'noreferrer' : rel
 
     return (

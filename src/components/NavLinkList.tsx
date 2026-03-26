@@ -1,4 +1,5 @@
 import type { NavItem } from '../types/content'
+import { NavLink } from 'react-router-dom'
 import { classNames } from '../utils/classNames'
 
 type NavLinkListProps = {
@@ -27,23 +28,39 @@ export default function NavLinkList({
       {items.map((item) => {
         const rel = item.external ? 'noreferrer' : undefined
         const target = item.external ? '_blank' : undefined
+        const baseLinkClasses = classNames(
+          'inline-flex items-center rounded-full text-sm font-medium text-white/72 transition duration-200 hover:text-[var(--color-text)]',
+          orientation === 'horizontal'
+            ? 'px-4 py-2 hover:bg-white/6'
+            : 'w-full rounded-2xl border border-white/8 bg-white/4 px-4 py-3 hover:border-[rgba(201,163,86,0.3)] hover:bg-white/8',
+        )
 
         return (
           <li key={item.label}>
-            <a
-              className={classNames(
-                'inline-flex items-center rounded-full text-sm font-medium text-white/72 transition duration-200 hover:text-[var(--color-text)]',
-                orientation === 'horizontal'
-                  ? 'px-4 py-2 hover:bg-white/6'
-                  : 'w-full rounded-2xl border border-white/8 bg-white/4 px-4 py-3 hover:border-[rgba(201,163,86,0.3)] hover:bg-white/8',
-              )}
-              href={item.href}
-              rel={rel}
-              target={target}
-              onClick={onNavigate}
-            >
-              {item.label}
-            </a>
+            {item.external ? (
+              <a
+                className={baseLinkClasses}
+                href={item.href}
+                rel={rel}
+                target={target}
+                onClick={onNavigate}
+              >
+                {item.label}
+              </a>
+            ) : (
+              <NavLink
+                className={({ isActive }) =>
+                  classNames(
+                    baseLinkClasses,
+                    isActive && 'bg-white/8 text-[var(--color-text)]',
+                  )
+                }
+                to={item.href}
+                onClick={onNavigate}
+              >
+                {item.label}
+              </NavLink>
+            )}
           </li>
         )
       })}
