@@ -17,6 +17,8 @@ function dotClassNameForTone(tone: HouseNoteTone) {
 }
 
 export default function FromTheHouseSection() {
+  const [featuredNote, ...secondaryNotes] = houseNotes
+
   return (
     <section className="scroll-mt-28 py-16 sm:py-20" id="from-the-house">
       <Container>
@@ -27,21 +29,38 @@ export default function FromTheHouseSection() {
           description={siteConfig.fromTheHouse.description}
         />
 
-        <div className="mt-10 grid gap-4 lg:grid-cols-3">
-          {houseNotes.map((item) => (
-            <Card key={item.label} className="p-5 sm:p-6">
-              <div className="flex items-center gap-3">
-                <span className={`status-dot ${dotClassNameForTone(item.tone)}`} />
-                <p className="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-subtle)]">
-                  {item.label}
-                </p>
-              </div>
-              <p className="font-display mt-5 text-2xl font-semibold tracking-[-0.03em] text-[var(--color-text)]">
-                {item.title}
+        <div className="mx-auto mt-10 max-w-4xl">
+          <Card className="p-7 sm:p-10">
+            <div className="flex items-center gap-3">
+              <span className={`status-dot ${dotClassNameForTone(featuredNote.tone)}`} />
+              <p className="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-subtle)]">
+                {featuredNote.label}
               </p>
-              <p className="mt-3 text-sm leading-7 text-white/62">{item.detail}</p>
-            </Card>
-          ))}
+            </div>
+            <p className="font-display mt-6 text-3xl font-semibold tracking-[-0.04em] text-[var(--color-text)] sm:text-4xl">
+              {featuredNote.title}
+            </p>
+            <p className="mt-4 max-w-2xl text-base leading-8 text-white/62 sm:text-lg">
+              {featuredNote.detail}
+            </p>
+          </Card>
+
+          <div className="mt-8 grid gap-6 border-t border-white/6 pt-6 sm:grid-cols-2">
+            {secondaryNotes.map((item) => (
+              <div key={item.label}>
+                <div className="flex items-center gap-3">
+                  <span className={`status-dot ${dotClassNameForTone(item.tone)}`} />
+                  <p className="text-[0.72rem] uppercase tracking-[0.22em] text-[var(--color-subtle)]">
+                    {item.label}
+                  </p>
+                </div>
+                <p className="font-display mt-4 text-xl font-semibold tracking-[-0.03em] text-[var(--color-text)]">
+                  {item.title}
+                </p>
+                <p className="mt-3 text-sm leading-7 text-white/58 sm:text-base">{item.detail}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </Container>
     </section>

@@ -73,7 +73,7 @@ export default function ResourcesSection() {
           description={siteConfig.resources.description}
         />
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-10 grid gap-x-8 gap-y-5 lg:grid-cols-2">
           {gateways.map((gateway) => (
             <Card
               key={gateway.title}
@@ -81,26 +81,26 @@ export default function ResourcesSection() {
               interactive
               target="_blank"
               ariaLabel={`Open ${gateway.title}`}
+              className="rounded-[24px] p-5 sm:p-6"
             >
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[rgba(201,163,86,0.16)] bg-[rgba(201,163,86,0.1)] text-[var(--color-gold)]">
+              <div className="flex items-start gap-4">
+                <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/8 bg-white/3 text-[var(--color-gold)]">
                   <ResourceGlyph icon={gateway.icon} />
                 </div>
-                <span className="rounded-full border border-white/10 bg-white/4 px-3 py-1 text-[0.72rem] font-medium text-white/52">
-                  {gateway.domain}
-                </span>
-              </div>
 
-              <h3 className="font-display mt-8 text-2xl font-semibold tracking-[-0.03em] text-[var(--color-text)]">
-                {gateway.title}
-              </h3>
-              <p className="mt-3 text-sm leading-7 text-white/65 sm:text-base">
-                {gateway.description}
-              </p>
+                <div className="min-w-0">
+                  <h3 className="font-display text-xl font-semibold tracking-[-0.03em] text-[var(--color-text)] sm:text-2xl">
+                    {gateway.title}
+                  </h3>
+                  <p className="mt-1 text-sm text-white/42">{gateway.domain}</p>
+                  <p className="mt-3 text-sm leading-7 text-white/62 sm:text-base">
+                    {gateway.description}
+                  </p>
 
-              <div className="mt-6 flex items-center justify-between text-sm font-semibold text-[var(--color-gold)]">
-                <span>Visit resource</span>
-                <span className="transition duration-300 group-hover:translate-x-1">{'->'}</span>
+                  <div className="mt-5 text-sm font-semibold text-[var(--color-gold)]">
+                    Visit resource {'->'}
+                  </div>
+                </div>
               </div>
             </Card>
           ))}
